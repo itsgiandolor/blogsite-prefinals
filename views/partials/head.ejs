@@ -1,0 +1,206 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gian Dolor's Blog</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3e6ff; /* Light lavender background */
+            color: #333;
+        }
+    
+        /* Navigation Bar */
+        nav {
+            background-color: #5e2b97; /* Deep purple */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .site-title a {
+            color: white;
+            text-decoration: none;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+    
+        nav ul li {
+            margin-left: 20px;
+        }
+    
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: 0.3s;
+        }
+    
+        nav ul li a:hover {
+            background-color: #7a42c1; /* Brighter purple on hover */
+            border-radius: 5px;
+        }
+    
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #b084f1; /* Soft purple */
+            color: white;
+        }
+    
+        header h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+    
+        /* Blog List */
+        .blog-list {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .blog-list li {
+            list-style: none;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            transition: background 0.3s;
+        }
+    
+        .blog-list li:last-child {
+            border-bottom: none;
+        }
+    
+        .blog-list li:hover {
+            background-color: #f3e6ff;
+        }
+    
+        .blog-list h4 a {
+            text-decoration: none;
+            color: #5e2b97;
+            font-size: 20px;
+        }
+    
+        .blog-list h4 a:hover {
+            color: #7a42c1;
+            text-decoration: underline;
+        }
+    
+        /* 404 Error Page */
+        .error-container {
+            text-align: center;
+            padding: 50px;
+        }
+    
+        .error-container h1 {
+            font-size: 100px;
+            color: #5e2b97;
+            margin-bottom: 10px;
+        }
+    
+        .error-container h2 {
+            font-size: 30px;
+            color: #7a42c1;
+        }
+    
+        .error-container p {
+            font-size: 18px;
+            color: #4a1c75;
+        }
+    
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6b2aa4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    
+        .btn:hover {
+            background-color: #7a42c1;
+        }
+    
+        /* Create Page */
+        .create-blog-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
+        }
+    
+        .create-blog-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        .create-blog-form .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .create-blog-form label {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+    
+        .create-blog-form input[type="text"],
+        .create-blog-form textarea {
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+    
+        .create-blog-form input[type="text"]:focus,
+        .create-blog-form textarea:focus {
+            border-color: #5e2b97;
+            outline: none;
+        }
+    
+        .create-blog-form textarea {
+            min-height: 150px;
+            line-height: 1.5;
+        }
+    
+        .create-blog-form button.submit-btn {
+            padding: 14px;
+            font-size: 18px;
+            color: white;
+            background-color: #5e2b97;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .create-blog-form button.submit-btn:hover {
+            background-color: #7a42c1;
+        }
+    </style>
+    
+</head>

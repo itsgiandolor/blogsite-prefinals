@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <section class="create-blog-section">
+        <h1>Write Your Blog</h1>
+        <p>Share your ideas and experiences with the world! Let’s make your blog post shine.</p>
+        
+        <!-- Blog Writing Form -->
+        <form action="/blogs" method="POST" class="create-blog-form">
+            <div class="form-group">
+                <label for="title">Blog Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter blog title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea id="content" name="content" rows="10" placeholder="Write your blog content here..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tags">Tags (Optional)</label>
+                <input type="text" id="tags" name="tags" placeholder="Add some tags, e.g., travel, tech, life">
+            </div>
+
+            <button type="submit" class="submit-btn">Publish Blog</button>
+        </form>
+    </section>
+</body>
+</html>
