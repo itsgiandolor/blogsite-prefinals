@@ -11,6 +11,9 @@ app.set('view engine', 'ejs');
 // listen for requests
 app.listen(5000);
 
+// middleware & static files
+app.use(express.static('public'));
+
 // homepage
 app.get('/', (req, res) => {
     // res.send('<h1> homepage </h1>');
