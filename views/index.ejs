@@ -12,36 +12,21 @@
 
     <section>
         <h3>Recent Posts</h3>
-        <ul class="blog-list">
-            <li>
-                <h4><a href="#">Travel Day: Lost in a New City</a></h4>
-                <p>That time I took a random bus and ended up discovering the best street food ever.</p>
-            </li>
-            <li>
-                <h4><a href="#">School Day: Surviving Finals Week</a></h4>
-                <p>How I went from total panic to absolute relief in just one week of studying (and coffee).</p>
-            </li>
-            <li>
-                <h4><a href="#">Workout Day: Lifting More Than My Problems</a></h4>
-                <p>That feeling when you add extra weight to your bench press and don’t get crushed. A victory.</p>
-            </li>
-            <li>
-                <h4><a href="#">Cycling Day: A Ride Through the Unknown</a></h4>
-                <p>A casual bike ride turned into an unexpected adventure through scenic routes.</p>
-            </li>
-            <li>
-                <h4><a href="#">Midnight Thoughts: The Universe at 2 AM</a></h4>
-                <p>When sleep is nowhere to be found, deep thoughts take over. What even is time?</p>
-            </li>
-            <li>
-                <h4><a href="#">Current Lovelife: What Even is Love?</a></h4>
-                <p>I like this nursing student from CSPC. NI HAO FYN SHYTT BABY I MISS YOU.
-                    LOVE U MY BABY SO MUCH I MISS YOU BAKIT ANG LAYO NG CSPC SA ADNU SANA KAPITBAHAY NALANG. 
-                    Oh to like someone in your similar IQ range where you don't have to overexplain everything. 
-                    Hahaha hindi ako delulu sir she fw me (not literally) pero I don't wanna speed things up. 
-                    I just want to enjoy the getting to know each other phase para no regrets in the end.</p>
-            </li>
-        </ul>
+            <ul class="blog-list">
+                <% if (blogs.length > 0) { %>
+                <% blogs.forEach(blog => { %>
+                    <li>
+                        <a class="single" href="/blogs/<%= blog._id %>">
+                            <h4><%= blog.title %></h4>
+                        </a>
+                        
+                        <p><%= blog.snippet %></p>
+                    </li>
+                <% }) %>
+                <% } else { %>
+                    <p> There are no blogs to display...</p>
+                <% } %>
+            </ul>
     </section>
 </body>
 </html>

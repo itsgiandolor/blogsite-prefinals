@@ -7,6 +7,17 @@ body {
     color: #333;
 }
 
+a {
+    color: inherit;       /* Inherit the color from the parent element */
+    text-decoration: none; /* Removes the underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+    color: #8e44ad;             /* Optional: Add a nice hover color */
+}
+
+
 /* Navigation Bar */
 nav {
     background-color: #5e2b97; /* Deep purple */
@@ -195,4 +206,53 @@ header h2 {
 
 .create-blog-form button.submit-btn:hover {
     background-color: #7a42c1;
+}
+
+/* Details Page */
+.details.content {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem 3rem;
+    background-color: #f8f1fc;
+    border: 2px solid #d1a4f3;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(129, 97, 160, 0.15);
+    color: #3d2a54;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .details.content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #6a1b9a;
+    border-bottom: 2px solid #c084fc;
+    padding-bottom: 0.5rem;
+  }
+  
+  .details.content .content p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    white-space: pre-wrap;
+  }
+  
+  .details.content .delete {
+    display: inline-block;
+    background-color: #a855f7;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .details.content .delete:hover {
+    background-color: #9333ea;
+  }
+  
+  .delete {
+    cursor: pointer;
+    color: red;
+    text-decoration: underline;
 }
