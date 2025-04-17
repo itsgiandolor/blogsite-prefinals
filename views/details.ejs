@@ -9,7 +9,14 @@
             <div class="content">
                 <p> <%= blog.body %> </p>
             </div>
-            <a class="delete" data-doc="<%= blog._id %>">Delete</a>
+
+            <div class="button-container">
+                <!-- Edit Button -->
+                <a href="/blogs/<%= blog._id %>/edit" class="edit-btn">Edit</a>
+                
+                <!-- Delete Button -->
+                <a href="/blogs/<%= blog._id %>?_method=DELETE" class="delete">Delete</a>
+            </div>            
         </div>
 
         <script>
