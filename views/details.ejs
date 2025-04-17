@@ -1,39 +1,40 @@
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
-
-    <body>
-        <%- include('./partials/nav.ejs') %>
-
-        <div class="details content">
-            <h2> <%= blog.title %> </h2>
-            <div class="content">
-                <p> <%= blog.body %> </p>
-            </div>
-
-            <div class="button-container">
-                <!-- Edit Button -->
+     <%- include('./partials/head.ejs') %>
+ 
+     <body>
+         <%- include('./partials/nav.ejs') %>
+ 
+         <div class="details content">
+             <h2> <%= blog.title %> </h2>
+             <div class="content">
+                 <p> <%= blog.body %> </p>
+             </div>
+             <!-- Updated delete button structure -->
+             <div class="button-container">
                 <a href="/blogs/<%= blog._id %>/edit" class="edit-btn">Edit</a>
-                
-                <!-- Delete Button -->
-                <a href="/blogs/<%= blog._id %>?_method=DELETE" class="delete">Delete</a>
-            </div>            
-        </div>
-
-        <script>
-            const trashcan = document.querySelector('a.delete');
-
-            trashcan.addEventListener('click', (e) => {
-                const endpoint = `/blogs/${trashcan.dataset.doc}`;
-
-                fetch(endpoint, {
-                    method: 'DELETE'
-                })
-                    .then((response) => response.json())
-                    .then((data) => window.location.href = data.redirect)
-                    .catch((err) => {
-                        console.log(err);
-                    })
-            })
-        </script>
-    </body>
-</html>
+                 <a class="delete" href="#" data-doc="<%= blog._id %>">Delete</a>
+             </div>
+         </div>
+ 
+         <script>
+             const trashcan = document.querySelector('a.delete');
+ 
+             trashcan.addEventListener('click', (e) => {
+                 const endpoint = `/blogs/${trashcan.dataset.doc}`;
+ 
+                 fetch(endpoint, {
+                     method: 'DELETE'
+                 })
+                     .then((response) => response.json())
+                     .then((data) => {
+                         if (data.redirect) {
+                             window.location.href = data.redirect;
+                         }
+                     })
+                     .catch((err) => {
+                         console.log(err);
+                     })
+             })
+         </script>
+     </body>
+ </html>
